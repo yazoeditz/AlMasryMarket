@@ -1,0 +1,500 @@
+:root {
+    --rose-700: #be123c;
+    --white: #ffffff;
+    --black: #000000;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--white);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    background-color: var(--white);
+    width: 100%;
+   
+  }
+  
+  .header {
+    background-color: var(--rose-700);
+    width: 100%;
+    padding: 0 4rem;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    width: 100%;
+  }
+  
+  
+  .header-columns {
+    flex: 1;
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  .title-column {
+    width: 74%;
+  }
+  
+  .main-title {
+    margin-top: 3rem;
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+  
+  .image-column {
+    width: 26%;
+    margin-left: -500px;
+  }
+  
+  .header-image {
+    width: 215px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 108px;
+    margin-left:-59px;
+  }
+  
+  .logout-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+    font-size: 2rem;
+    color: var(--black);
+    margin-top: 40px;
+  }
+  
+  .logout-icon {
+    width: 90px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    align-self: center;
+  }
+  
+  .remove-product-title {
+    font-size: 6rem;
+    color: var(--rose-700);
+    border: 7px solid var(--white);
+    margin-left: 0.75rem;
+  }
+  
+  .select-method-title {
+    font-size: 3.75rem;
+    color: var(--black);
+    border: 6px solid var(--white);
+    margin-top: 3rem;
+  }
+  
+  .method-containers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1333px;
+    font-size: 3.75rem;
+    color: var(--rose-700);
+    margin-left: 800px;
+  }
+  
+  .method-box {
+  
+    flex: 1;
+    background-color: var(--white);
+    border-radius: 52px;
+    padding: 3rem 2.75rem 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .method-icon {
+    margin-top: 100px;
+    width: 113px;
+    aspect-ratio: 1.23;
+    object-fit: contain;
+    align-self: center;
+  }
+  
+  .codes-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
+  }
+  
+  .codes-left {
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  .code-icon {
+    width: 90px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  
+  .code-icon-right {
+    width: 90px;
+    aspect-ratio: 1.64;
+    object-fit: contain;
+    margin: auto 0;
+  }
+  
+  .separator {
+    align-self: flex-start;
+  }
+  
+  .method-text {
+    margin-top: 3.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+        padding: 0 1.25rem;
+    }
+  
+    .header-columns {
+        flex-direction: column;
+    }
+  
+    .title-column {
+        width: 100%;
+    }
+  
+    .main-title {
+        font-size: 2.25rem;
+        margin-top: 2.5rem;
+    }
+  
+    .image-column {
+        width: 100%;
+        margin-left: 0;
+    }
+  
+    .header-image {
+        margin-top: 2.5rem;
+        width: 100px;
+    }
+  
+    .remove-product-title,
+    .select-method-title,
+    .method-containers,
+    .logout-section {
+        font-size: 2.25rem;
+    }
+  
+    .select-method-title {
+        margin-top: 2.5rem;
+    }
+  
+    .method-containers {
+        margin-top: 2.5rem;
+    }
+  
+    .method-box {
+        padding: 1.25rem 1.25rem 6rem;
+    }
+  
+    .method-text {
+        margin-top: 2.5rem;
+    }
+  }
+  
+  body {
+    font-family: "JetBrains Mono", monospace;
+  }
+  
+  .container {
+    display: flex;
+    gap: 90px;
+    margin-right: -100px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 30px;
+    width: 220px;
+    height: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ba393b; /* Dark red color */
+    transition: transform 0.3s;
+  
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .icon {
+    font-size: 60px; /* Bigger icon */
+    margin-bottom: 15px;
+  }
+  
+  .text {
+    font-size: 22px; /* Bigger text */
+    line-height: 1.6;
+  }
+  .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between images and slash */
+  }
+  
+  .icon img {
+    width: 50px; /* Adjust image size to fit container */
+    height: auto;
+   
+  }
+  
+  .icon span {
+    font-size: 30px;
+    color: #ba393b; /* Same dark red color */
+  }
+ 
+  .main-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(242, 41, 198, 1) 45%, rgba(230, 50, 201, 1) 48%, rgba(0, 212, 255, 1) 100%);;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    border-radius: 8px;
+    transition: background 0.3s;
+    margin-top: 80px;
+
+  }
+.eel{
+  width: 80px;
+  margin-top: 72px;
+  margin-right: 30px;
+}
+.search-id-section {
+  background: url('your-background-image.png') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Courier New', monospace;
+  color: #990000;
+  
+}
+
+.search-id-section h1 {
+  font-size: 70px;
+  text-shadow: 1px 1px white;
+}
+
+.search-box {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 550px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #444;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 500px;
+ margin-right: 150px;
+  margin-top: 120px;
+  
+}
+
+.container h1 {
+  color: #ffffff;
+}
+
+.section {
+  background-color: #ffffff;
+  padding: 50px 30px;
+  border: 1.5px solid #b2b2b2;
+  border-radius: 0.25em;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+}
+
+#my-qr-reader {
+  padding: 20px !important;
+  border: 1.5px solid #b2b2b2 !important;
+  border-radius: 8px;
+}
+
+#my-qr-reader img[alt="Info icon"] {
+  display: none;
+}
+
+#my-qr-reader img[alt="Camera based scan"] {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid #b2b2b2;
+  outline: none;
+  border-radius: 0.25em;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: #008000ad;
+  transition: 0.3s background-color;
+}
+
+button:hover {
+  background-color: #008000;
+}
+
+#html5-qrcode-anchor-scan-type-change {
+  text-decoration: none !important;
+  color: #1d9bf0;
+}
+
+video {
+  width: 100% !important;
+  border: 1px solid #b2b2b2 !important;
+  border-radius: 0.25em;
+}
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.form-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background-color: #e8e8e8;
+  font-size: 16px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;  /* Aligns items at the top */
+  gap: 20px;  /* Space between inputs and photo circle */
+  width: 100%;
+}
+
+.inputs {
+  flex: 1;  /* Takes remaining space */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.photo-section {
+  margin: 0;  /* Remove previous margin */
+  margin-top: 10px;  /* Adjust to align with first input */
+}
+
+/* Optional: Add hover effect to photo circle */
+.photo-circle:hover {
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.photo-circle {
+  width: 120px;
+  height: 120px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+}
+
+.photo-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.add-button {
+  background-color: #00B050;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plus-icon {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-weight: bold;
+}

@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    background-color: white;
+  }
+  
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 0 4rem;
+    width: 100%;
+    background-color:#be123c ;
+  }
+  
+  .header-content {
+    flex: 1;
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  .header-left {
+    width: 74%;
+  }
+  
+  .header-title {
+    font-size: 3.75rem;
+    font-weight: bold;
+    color: white;
+    margin: auto 0;
+  }
+  
+  .header-right {
+    width: 26%;
+    margin-left: 1.25rem;
+  }
+  
+  .profile-image {
+    width: 215px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 108px;
+   margin-left: -400px;
+  }
+  
+  .logout-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.25rem;
+    font-size: 3rem;
+    color: black;
+  }
+  
+  .logout-icon {
+    width: 90px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  
+  .title {
+    border: solid white;
+    text-align: center;
+  }
+  
+  .purchase {
+    margin-top: 0.375rem;
+    font-size: 6rem;
+    color: #4fd1c5;
+    border-width: 7px;
+  }
+  
+  .select-method {
+    margin-top: 3.5rem;
+    font-size: 3.75rem;
+    color: black;
+    border-width: 6px;
+  }
+  
+  .options-container {
+    width: 100%;
+    max-width: 1333px;
+    margin-top: 5rem;
+  }
+  
+  .options-wrapper {
+    background-color:#be123c ;
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .options-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    font-size: 3.75rem;
+    color: #4fd1c5;
+  }
+  
+  .option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 5rem;
+    background-color: white;
+    border-radius: 52px;
+    min-width: 300px;
+  }
+  
+  .option-icon {
+    object-fit: contain;
+    align-self: center;
+  }
+  
+  .option:first-child .option-icon {
+    width: 143px;
+    aspect-ratio: 1.57;
+  }
+  
+  .option:last-child .option-icon {
+    width: 90px;
+    aspect-ratio: 1;
+  }
+  
+  .option-text {
+    margin-top: 6rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding: 0 1.25rem;
+    }
+  
+    .header-content {
+      flex-direction: column;
+    }
+  
+    .header-left,
+    .header-right {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .header-title {
+      font-size: 2.25rem;
+      margin-top: 2.5rem;
+    }
+  
+    .profile-image {
+      margin-top: 2.5rem;
+    }
+  
+    .logout-section {
+      font-size: 2.25rem;
+    }
+  
+    .purchase {
+      font-size: 2.25rem;
+    }
+  
+    .select-method {
+      font-size: 2.25rem;
+      margin-top: 2.5rem;
+    }
+  
+    .options-container {
+      margin-top: 2.5rem;
+    }
+  
+    .option {
+      padding: 6rem 1.25rem;
+      font-size: 2.25rem;
+    }
+  
+    .option-text {
+      margin-top: 2.5rem;
+    }
+  }
+  .option-link {
+  text-decoration: none;
+  flex: 1;
+  min-width: 300px;
+}
+
+.option {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.option:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

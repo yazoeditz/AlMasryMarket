@@ -1,0 +1,26 @@
+---
+title: "Invoice"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+params:
+  items: NULL
+  taxes: 0
+  total: 0
+---
+
+# 🧾 Receipt Summary
+
+```{r setup, include=FALSE}
+library(knitr)
+library(kableExtra)
+library(dplyr)
+
+params$items %>%
+  mutate(Total = Price * Quantity) %>%
+  kable("latex", booktabs = TRUE, align = "lccc", 
+        col.names = c("Item", "Price", "Quantity", "Total")) %>%
+  kable_styling(latex_options = c("hold_position", "striped", "repeat_header"), font_size = 12)
+
+# knitr::include_graphics("barcode.png")

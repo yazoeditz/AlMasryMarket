@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EL MAHDI MARKET - Sign Up</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('wallpaper.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .logo-container {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 40px auto 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border: 5px solid #fff;
+      overflow: hidden;
+    }
+
+    .logo-img {
+      width: 90%;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .brand-subtitle {
+      font-size: 18px;
+      color: #777;
+      letter-spacing: 5px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .form {
+      width: 60%;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+      color: #555;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px;
+      background-color: #ef1414;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .btn:hover {
+      background-color: #222;
+    }
+
+    .back-btn {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="mahdi.png.jpg" class="logo-img" alt="EL MAHDI MARKET Logo">
+    </div>
+    <div class="brand-name">EL MAHDI</div>
+    <div class="brand-subtitle">MARKET</div>
+
+    <div class="form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="signup_name" type="text" placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="signup_email" type="email" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="signup_phone" type="text" placeholder="Enter phone number">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="signup_password" type="password" placeholder="Create a password">
+      </div>
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label>
+        <input id="signup_confirm" type="password" placeholder="Confirm password">
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="signup_role">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <button class="btn" onclick="submitSignup()">Sign Up</button>
+      <button class="btn back-btn" onclick="parent.Shiny.setInputValue('signup-to_login', true)">Back to Login</button>
+    </div>
+  </div>
+
+  <script>
+    function submitSignup() {
+      parent.Shiny.setInputValue('signup-signup_name', document.getElementById('signup_name').value);
+      parent.Shiny.setInputValue('signup-signup_email', document.getElementById('signup_email').value);
+      parent.Shiny.setInputValue('signup-signup_phone', document.getElementById('signup_phone').value);
+      parent.Shiny.setInputValue('signup-signup_password', document.getElementById('signup_password').value);
+      parent.Shiny.setInputValue('signup-signup_confirm', document.getElementById('signup_confirm').value);
+      parent.Shiny.setInputValue('signup-signup_role', document.getElementById('signup_role').value);
+      parent.Shiny.setInputValue('signup-signup_button', true, {priority: 'event'});
+    }
+  </script>
+</body>
+</html>

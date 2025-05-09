@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EL MAHDI MARKET - Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('wallpaper.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 800px;
+      height: 800px;
+      background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .logo-container {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 40px auto 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border: 5px solid #fff;
+      overflow: hidden;
+    }
+
+    .logo-img {
+      width: 90%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .brand-subtitle {
+      font-size: 18px;
+      letter-spacing: 5px;
+      color: #777;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .login-form {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: #555;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #999;
+    }
+
+    .login-btn, .signup-btn, .forgot-btn {
+      width: 100%;
+      padding: 16px;
+      background-color: #ef1414;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .login-btn:hover, .signup-btn:hover, .forgot-btn:hover {
+      background-color: #222;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .signup-btn {
+      background-color: #555;
+    }
+
+    .forgot-btn {
+      background-color: #777;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="mahdi.png.jpg" alt="EL MAHDI MARKET Logo" class="logo-img">
+    </div>
+
+    <div class="brand-name">EL MASRY</div>
+    <div class="brand-subtitle">MARKET</div>
+
+    <div class="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+      </div>
+
+      <button class="login-btn">Login</button>
+      <button class="signup-btn">Sign Up</button>
+      <button class="forgot-btn">Forgot Password</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('.login-btn')?.addEventListener('click', function () {
+        const user = document.getElementById('username')?.value || '';
+        const pass = document.getElementById('password')?.value || '';
+        parent.Shiny.setInputValue('login-login_user', user, {priority: 'event'});
+        parent.Shiny.setInputValue('login-login_pass', pass, {priority: 'event'});
+      });
+
+      document.querySelector('.signup-btn')?.addEventListener('click', function () {
+        parent.Shiny.setInputValue('login-ui-go_to_signup', true, {priority: 'event'});
+      });
+
+      document.querySelector('.forgot-btn')?.addEventListener('click', function () {
+        parent.Shiny.setInputValue('login-ui-go_to_forgot_password', true, {priority: 'event'});
+      });
+    });
+  </script>
+</body>
+</html>

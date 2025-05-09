@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Home - El Mahdy Market</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Koulen&family=Manjari&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-content">
+          <div class="profile-section">
+            <img src="mahdi.png.jpg" class="profile-image" alt="Profile" />
+            <h1 class="welcome-text">Welcome back!</h1>
+          </div>
+          <button class="logout-button" onclick="postMessageToShiny('logout')">
+            <img src="logout.png-removebg-preview.png" class="user-avatar" alt="Logout" />
+            <span class="logout-text">log out</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="grid-container">
+
+          <!-- View Prices Button -->
+          <button class="action-button" onclick="postMessageToShiny('view_prices')">
+            <img src="prices.png" alt="Prices" class="action-icon" />
+            <span class="action-text">View Prices</span>
+          </button>
+
+          <!-- Add to Cart Button -->
+          <button class="action-button" onclick="postMessageToShiny('add_to_cart')">
+            <img src="add_cart.png" alt="Add Cart" class="action-icon" />
+            <span class="action-text">Add to Cart</span>
+          </button>
+
+          <!-- View Cart Button -->
+          <button class="action-button" onclick="postMessageToShiny('view_cart')">
+            <img src="view_cart.png" alt="View Cart" class="action-icon" />
+            <span class="action-text">View Cart</span>
+          </button>
+
+          <!-- Checkout Button -->
+          <button class="action-button" onclick="postMessageToShiny('checkout')">
+            <img src="checkout.png" alt="Checkout" class="action-icon" />
+            <span class="action-text">Checkout</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function postMessageToShiny(action) {
+        window.parent.postMessage({ action: action }, '*');
+      }
+    </script>
+  </body>
+</html>
