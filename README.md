@@ -1,5 +1,3 @@
-**
-
 # 🛒 Al Masry Market - POS & Store Management System
 
 **Al Masry Market** is a comprehensive, interactive Point of Sale (POS) and inventory management web application built using **R (Shiny)** and **Python**. Designed for supermarkets and retail stores, this platform bridges a robust R-based frontend and analytical engine with a Python-powered backend for real-time camera barcode scanning and automated email communications.
