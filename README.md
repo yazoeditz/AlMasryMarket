@@ -1,6 +1,4 @@
-Here is a detailed, professional `README.md` file tailored for your project based on the provided files. You can copy and paste this directly into a `README.md` file in your repository.
-
-***
+**
 
 # 🛒 Al Masry Market - POS & Store Management System
 
